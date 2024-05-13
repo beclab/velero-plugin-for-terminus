@@ -33,5 +33,11 @@ func (p *RestoreItemAction) Execute(input *velero.RestoreItemActionExecuteInput)
 	// 	inputMap["status"] = map[string]interface{}{"state": "active"}
 	// }
 
+	kind := inputMap["kind"]
+	if kind == "DistributedRedisCluster" {
+		spec := inputMap["spec"].(map[string]interface{})
+		spec["init"] = nil
+	}
+
 	return velero.NewRestoreItemActionExecuteOutput(&unstructured.Unstructured{Object: inputMap}), nil
 }
