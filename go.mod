@@ -1,8 +1,12 @@
 module bytetrade.io/web3os/velero-plugin-for-terminus
 
-go 1.21.5
+go 1.22.4
 
 require github.com/vmware-tanzu/velero v1.12.2
+
+require github.com/ngaut/log v0.0.0-20221012222132-f3329cba28a5
+
+replace github.com/ngaut/log v0.0.0-20221012222132-f3329cba28a5 => ./pkg/github.com/ngaut/log
 
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
@@ -30,7 +34,6 @@ require (
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
-	github.com/ngaut/log v0.0.0-20221012222132-f3329cba28a5
 	github.com/oklog/run v1.0.0 // indirect
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.0
