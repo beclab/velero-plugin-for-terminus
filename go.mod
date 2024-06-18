@@ -8,6 +8,8 @@ require github.com/ngaut/log v0.0.0-20221012222132-f3329cba28a5
 
 replace github.com/ngaut/log v0.0.0-20221012222132-f3329cba28a5 => ./pkg/github.com/ngaut/log
 
+replace golang.org/x/unix v0.21.0 => ./pkg/golang.org/x/sys/unix
+
 require (
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/emicklei/go-restful/v3 v3.8.0 // indirect
@@ -42,7 +44,7 @@ require (
 	github.com/stretchr/testify v1.8.4 // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/oauth2 v0.7.0 // indirect
-	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/sys v0.21.0 // indirect
 	golang.org/x/term v0.13.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/time v0.0.0-20220609170525-579cf78fd858 // indirect

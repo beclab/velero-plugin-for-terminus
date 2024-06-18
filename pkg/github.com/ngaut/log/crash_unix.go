@@ -6,7 +6,8 @@ package log
 import (
 	"log"
 	"os"
-	"syscall"
+
+	"golang.org/x/sys/unix"
 )
 
 func CrashLog(file string) {
@@ -14,6 +15,6 @@ func CrashLog(file string) {
 	if err != nil {
 		log.Println(err.Error())
 	} else {
-		syscall.Dup2(int(f.Fd()), 2)
+		unix.Dup2(int(f.Fd()), 2)
 	}
 }
