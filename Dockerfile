@@ -20,8 +20,7 @@ WORKDIR /workspace
 COPY . ./
 
 # Build
-RUN CGO_ENABLED=0 go build -a -o ./_output/velero-plugin-for-terminus ./velero-plugin-for-terminus/ && \ 
-  CGO_ENABLED=0 go build -a -o ./_output/cp-plugin ./hack/cp-plugin
+RUN CGO_ENABLED=0 go build -a -o ./_output/velero-plugin-for-terminus ./velero-plugin-for-terminus/ && CGO_ENABLED=0 go build -a -o ./_output/cp-plugin ./hack/cp-plugin
 
 FROM gcr.io/distroless/static:debug
 WORKDIR /
